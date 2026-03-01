@@ -1,0 +1,82 @@
+.file-upload__area {
+    position: relative;
+    outline: 3px dashed #8bb88b;
+    background: white;
+    border-radius: 30px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.area-draging {
+    outline: 5px dashed #8bb88b;
+    background: #f1fbf1;
+    transform-origin: center;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.file-upload__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.file-upload__manager {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.file-determine {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+
+    font-size: 1.2rem;
+    color: #1f4f1f;
+
+    border-radius: 40px;
+    border: solid 1px #1f4f1f80;
+}
+
+.btn {
+    position: relative;
+    z-index: 2;
+    background-color: #2d6e2d;
+    color: white;
+    border: none;
+    box-shadow: 0 8px 16px -4px #9bc59b;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.detector_card__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateZ(-50%);
+}
+
+.detector-card__badges {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}

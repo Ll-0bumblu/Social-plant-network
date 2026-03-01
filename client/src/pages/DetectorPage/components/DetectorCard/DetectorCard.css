@@ -1,0 +1,136 @@
+.detector-card {
+    position: relative;
+    background: #eaf5ea;
+    border-radius: 28px;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+.detector-card__conent {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.detector-card__header {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    transition: hidden 0.3s;
+    transition: visible 0.3s;
+}
+
+.detector-card__icon {
+  width: 80px;
+  height: 80px;
+  background: #b1d5b1;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+}
+
+.detector-card__title {
+  color: #1f4f1f;
+  margin: 0;
+}
+
+.detector-card__badges {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.detector-card__footer {
+  margin-top: 24px;
+}
+
+.badge {
+    background: #e7f5e7;
+    color: #2c6e2c;
+    padding: 4px 10px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.detector-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: #2c6e2c;
+    color: #e7f5e7;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.detector-btn:hover {
+    box-shadow: 0 8px 16px -4px #9bc59b;
+}
+
+/* не отправленное фото */
+
+.detector_card__nosent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+
+    transition: hidden 0.3s;
+    transition: visible 0.3s;
+}
+
+.nosent_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.nosent_title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c6e2c;
+}
+
+.nosent_text {
+    font-size: 1.2rem;
+    color: #4f7a4f;
+    margin-bottom: 8px;
+}
+
+.nosent_tips {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.tip_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.tip_icon {
+    font-size: 1.8rem;
+}
+
+.tip_text {
+    font-size: 0.9rem;
+    color: #4f7a4f;
+}

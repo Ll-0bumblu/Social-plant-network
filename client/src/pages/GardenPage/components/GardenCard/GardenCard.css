@@ -1,0 +1,37 @@
+.plant-card {
+    max-width: 300px;
+    background: #f9fff9;
+    border-radius: 28px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    border: 1px solid #d0e8d0;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.plant-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(145deg, #d1e7d1, #b8d9b8);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3c6e3c;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.plant-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.plant-info p {
+    color: #3f5e3f;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 6px 0 4px;
+}
