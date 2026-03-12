@@ -4,10 +4,12 @@ import { useQuery } from '@tanstack/react-query';
 import './Calendar.css';
 import NoteDateList from '../NoteDateList/NoteDateList';
 
+import CircularProgress from '@mui/material/CircularProgress';
+
 const Calendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
 
-    const { data: careDates } = useQuery({ 
+    const { data: careDates, isLoading } = useQuery({ 
         queryKey: ['careDates'], 
         queryFn: GetCareDates 
     });
@@ -116,7 +118,7 @@ const Calendar = () => {
 
             
         </div>
-            <NoteDateList dateList={careDates?.slice(0, 11) || []} />
+            {!isLoading ? <NoteDateList dateList={careDates?.slice(0, 11) || []}/> : <CircularProgress color="success" className='curcular-progress'/>}
         </>
         
     );

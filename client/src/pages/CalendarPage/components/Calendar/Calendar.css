@@ -1,6 +1,8 @@
 .calendar {
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
-    background-color: #f2fbf2;
+  background-color: #f2fbf2;
   border-radius: 16px;
   padding: 20px;
 }
@@ -104,4 +106,9 @@
   flex-direction: row;
   gap: 5px;
   margin-left: 20px;
+}
+
+.curcular-progress {
+  align-self: center;
+  margin-top: 60px;
 }

@@ -9,7 +9,7 @@ import CalendarPage from './pages/CalendarPage/CalendarPage'
 import './App.css'
 
 function App() {
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({})
 
   return (
     <QueryClientProvider client={queryClient}>
