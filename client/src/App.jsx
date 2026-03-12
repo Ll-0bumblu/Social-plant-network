@@ -19,7 +19,7 @@ const queryClient = new QueryClient({})
         <Route path='/detector' element={<DetectorPage/>}/>
         <Route path='kalendar' element={<CalendarPage/>}/>
       </Routes>
-      <ReactQueryDevtools initialIsOpen={false}/>
+      {/* <ReactQueryDevtools initialIsOpen={false}/> */}
     </QueryClientProvider>
   )
 }
