@@ -4,8 +4,9 @@ import LooksOneIcon from '@mui/icons-material/LooksOne';
 import CircularProgress from '@mui/material/CircularProgress';
 
 import './DetectorCard.css'
+import SuccesPin from '../SuccesPin/SuccesPin';
 
-function DetectorCard({ status, cardData }) {
+function DetectorCard({ status, cardData, handleAddPlant}) {
   return (
     <div className="detector-card">
         <div className={'detector-card__conent' + (status === "resInfo" ? "": " hidden")}>
@@ -22,7 +23,7 @@ function DetectorCard({ status, cardData }) {
                 </div>
             </div>
             <div className="detector-card__footer">
-                <button className="detector-btn"><i className="fas fa-plus"></i> Добавить в "Мой сад"</button>
+                <button className="detector-btn" onClick={handleAddPlant}><i className="fas fa-plus"></i> Добавить в "Мой сад"</button>
             </div>
         </div>
 
@@ -53,6 +54,10 @@ function DetectorCard({ status, cardData }) {
 
         <div className={'detector_card__loading' + (status === "loading" ? " ": " hidden")}>
             <CircularProgress color="success"/>
+        </div>
+
+        <div className={"detector_card__succes" + (status === "addSucces" ? " " : " hidden")}>
+            <span className='succes_mess'>Успешно добавлено!</span>
         </div>
     </div>
   )

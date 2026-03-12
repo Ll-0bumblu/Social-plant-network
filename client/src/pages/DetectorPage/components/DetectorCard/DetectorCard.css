@@ -134,3 +134,26 @@
     font-size: 0.9rem;
     color: #4f7a4f;
 }
+
+/* == Успешная отправка == */
+
+.detector_card__succes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.succes_mess {
+    font-size: 20px;
+    color: #2c6e2c;
+    animation: show-mess linear .7s;
+}
+
+@keyframes show-mess {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

@@ -4,13 +4,13 @@ import HomeIcon from '@mui/icons-material/Home';
 import LocalSeeIcon from '@mui/icons-material/LocalSee';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import PlantIcon from '/plant-icon.png'
 import './Header.css'
 
 const navLinks = [
-    {to: '/garden', name: "Мой сад", icon: <HomeIcon/>},
+    {to: '/', name: "Мой сад", icon: <HomeIcon/>},
     {to: '/detector', name: "Детектор", icon: <LocalSeeIcon/>}, 
     {to: '/kalendar', name: "Календарь", icon: <CalendarMonthIcon/>}, 
-    {to: '/notifications', name: "Уведомления", icon: <NotificationsIcon/>}, 
 ]
 
 const Header = () => {
@@ -19,7 +19,8 @@ const Header = () => {
       <div className="header-container">
         <div className="header-content">
           <div className="logo-container">
-            <GrassIcon className="logo-icon" />
+            <img src={PlantIcon} className='logo-icon' alt="" />
+            {/* <GrassIcon className="logo-icon" /> */}
             <div className="logo-text">
               <span className="logo-bold">Plant</span>
               <span className="logo-light">Social</span>

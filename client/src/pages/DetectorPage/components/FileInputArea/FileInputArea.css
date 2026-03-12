@@ -42,15 +42,14 @@
     align-items: center;
     gap: 10px;
     padding: 12px 30px;
-
     font-size: 1.2rem;
     color: #1f4f1f;
-
     border-radius: 40px;
     border: solid 1px #1f4f1f80;
+    margin: 0;
 }
 
-.btn {
+.btn-detector {
     position: relative;
     z-index: 2;
     background-color: #2d6e2d;
@@ -60,7 +59,7 @@
     cursor: pointer;
 }
 
-.btn:disabled {
+.btn-disabled {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;

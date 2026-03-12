@@ -27,7 +27,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 24px;
-    margin: 32px 0;
 }
 
 .badge {
@@ -53,12 +52,14 @@
     font-weight: 500;
 }
 
-.btn {
+.btn-garden {
     background: #2d6e2d;
     border: none;
     color: white;
+    text-decoration: none;
     font-weight: 600;
     padding: 14px;
+    margin: 30px 0;
     border-radius: 40px;
     font-size: 1rem;
     display: inline-flex;

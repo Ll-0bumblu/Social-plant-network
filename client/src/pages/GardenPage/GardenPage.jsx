@@ -1,3 +1,4 @@
+import { GetPlanList } from '../../api/garden';
 import PageLayout from '../../layouts/PageLayout/PageLayout'
 import HomeIcon from '@mui/icons-material/Home';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
@@ -5,30 +6,33 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import GardenCard from './components/GardenCard/GardenCard';
 
 import './GardenPage.css'
-
-const cardData = [
-    {name: "Монстера Деликатесная"},
-    {name: "Монстера Деликатесная"},
-    {name: "Монстера Деликатесная"},
-    {name: "Монстера Деликатесная"},
-]
+import { useQuery } from '@tanstack/react-query';
+import { NavLink } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 
 function GardenPage() {
-  return (
-    <PageLayout icon={<HomeIcon/>} name={"Мой сад"}>
-            <div className="weather-note">
-                <span className='fas fa-umbrella'>⛈️ Завтра ожидается дождь. Полив монстеры можно пропустить.</span>
-            </div>
+    const query = useQuery({ 
+        queryKey: ['plants'], 
+        queryFn: GetPlanList,
+    })
 
-            <div className="plant-grid">
-                {cardData.map(item => <GardenCard cardData={item}/>)}
-            </div>
+    return (
+        <PageLayout icon={<HomeIcon/>} name={"Мой сад"}>
 
-            <div className="flex-row">
-                <div className="btn"><AddCircleIcon/> Добавить растение</div>
-            </div>
-    </PageLayout>
-  )
+                <div className="plant-grid">
+                    {query.isLoading && <CircularProgress color='succes' className='curular'/>}
+
+                    {query.data?.map(item => <GardenCard key={item.id} cardData={item}/>)}
+                </div>
+
+                <div className="flex-row">
+                    <NavLink className="btn-garden" to={'/detector'}><AddCircleIcon/> Добавить растение</NavLink>
+                </div>
+                {query.isError && <Alert severity="error"><AlertTitle>Ошибка!</AlertTitle>{query.error.message}</Alert>}
+        </PageLayout>
+    )
 }
 
 export default GardenPage

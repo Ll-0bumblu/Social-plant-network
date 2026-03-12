@@ -1,9 +1,9 @@
-const UploadPlanList = async () => {
+const GetPlanList = async () => {
     const controller = new AbortController()
     const timeoutId = setTimeout(() => controller.abort(), 10000)
 
     try{
-        const response = await fetch('/api/plantList', {
+        const response = await fetch('http://localhost:4000/api/plantList', {
             method: "GET",
             signal: controller.signal
         })
@@ -33,3 +33,5 @@ const UploadPlanList = async () => {
         throw new Error(`Ошибка: ${error.message}`)
     }
 }
+
+export {GetPlanList}
